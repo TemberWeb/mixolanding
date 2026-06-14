@@ -47,6 +47,14 @@
 
 <!-- HERO -->
 <section class="hero" id="inicio">
+  <div class="hero__slides">
+    <div class="hero__slide is-active" style="background-image:url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=2000&q=80')"></div>
+    <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=2000&q=80')"></div>
+    <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=2000&q=80')"></div>
+    <div class="hero__slide" style="background-image:url('https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?auto=format&fit=crop&w=2000&q=80')"></div>
+  </div>
+  <div class="hero__overlay"></div>
+
   <div class="container hero__content">
     <p class="eyebrow reveal">Estudio creativo — Mar del Plata, Argentina</p>
     <h1 class="hero__title">
@@ -63,17 +71,21 @@
       </a>
     </div>
   </div>
-  <div class="marquee">
-    <div class="marquee__track">
-      <span>Community Manager</span><span>·</span>
-      <span>Marketing Estratégico</span><span>·</span>
-      <span>Asesoría en IA</span><span>·</span>
-      <span>Community Manager</span><span>·</span>
-      <span>Marketing Estratégico</span><span>·</span>
-      <span>Asesoría en IA</span><span>·</span>
-    </div>
-  </div>
+
+  <div class="hero__dots" id="heroDots"></div>
 </section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="marquee__track">
+    <span>Community Manager</span><span>·</span>
+    <span>Marketing Estratégico</span><span>·</span>
+    <span>Asesoría en IA</span><span>·</span>
+    <span>Community Manager</span><span>·</span>
+    <span>Marketing Estratégico</span><span>·</span>
+    <span>Asesoría en IA</span><span>·</span>
+  </div>
+</div>
 
 <!-- SERVICIOS -->
 <section class="services" id="servicios">
@@ -83,47 +95,53 @@
       <h2 class="section-title">Servicios</h2>
     </div>
 
-    <div class="services__list">
-      <article class="service-row reveal">
-        <span class="service-row__num">01</span>
-        <div class="service-row__body">
+    <div class="services__grid">
+      <article class="service-card reveal">
+        <div class="service-card__media">
+          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=900&q=80" alt="Community Manager">
+          <span class="service-card__num">01</span>
+        </div>
+        <div class="service-card__body">
           <h3>Community Manager</h3>
           <p>Gestionamos tus redes con una voz propia: contenido, planificación, diseño y comunidad. Hacemos que tu marca esté presente, sea cercana y constante.</p>
-          <ul class="service-row__list">
+          <ul class="service-card__list">
             <li>Calendario de contenidos</li>
             <li>Diseño gráfico para redes</li>
             <li>Gestión de comunidad y mensajes</li>
           </ul>
         </div>
-        <span class="service-row__arrow">↗</span>
       </article>
 
-      <article class="service-row reveal">
-        <span class="service-row__num">02</span>
-        <div class="service-row__body">
+      <article class="service-card reveal">
+        <div class="service-card__media">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="Marketing Estratégico">
+          <span class="service-card__num">02</span>
+        </div>
+        <div class="service-card__body">
           <h3>Marketing Estratégico</h3>
           <p>Diseñamos planes de marketing a medida, con objetivos claros y métricas reales. Investigamos, posicionamos y acompañamos el crecimiento de tu marca paso a paso.</p>
-          <ul class="service-row__list">
+          <ul class="service-card__list">
             <li>Análisis de marca y mercado</li>
             <li>Planificación de campañas</li>
             <li>Branding y posicionamiento</li>
           </ul>
         </div>
-        <span class="service-row__arrow">↗</span>
       </article>
 
-      <article class="service-row reveal">
-        <span class="service-row__num">03</span>
-        <div class="service-row__body">
+      <article class="service-card reveal">
+        <div class="service-card__media">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Asesoría en IA">
+          <span class="service-card__num">03</span>
+        </div>
+        <div class="service-card__body">
           <h3>Asesoría en IA</h3>
           <p>Te ayudamos a integrar inteligencia artificial en tu negocio de forma simple: automatización, optimización de tareas y herramientas que ahorran tiempo real.</p>
-          <ul class="service-row__list">
+          <ul class="service-card__list">
             <li>Automatización de procesos</li>
             <li>Implementación de herramientas IA</li>
             <li>Capacitación para equipos</li>
           </ul>
         </div>
-        <span class="service-row__arrow">↗</span>
       </article>
     </div>
   </div>
@@ -131,22 +149,25 @@
 
 <!-- NOSOTROS -->
 <section class="about" id="nosotros">
-  <div class="container about__grid">
-    <div class="about__media reveal">
-      <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" alt="Equipo de MIXO Digital Studio trabajando">
-    </div>
-    <div class="about__content">
-      <p class="section-tag reveal">Quiénes somos</p>
-      <h2 class="section-title reveal">Un estudio con alma marplatense</h2>
-      <p class="reveal">Nacimos en Mar del Plata, entre el sonido del mar y las ganas de cambiar cómo se ve la comunicación local.</p>
-      <p class="reveal">Dos mentes creativas, mundos distintos: marketing visual y diseño de moda. Una sola visión.</p>
-      <p class="reveal">Hoy operamos hacia todo el territorio argentino, combinando calidez humana con estrategias que realmente funcionan. <strong>Cada proyecto es una pieza única de gran valor.</strong></p>
-      <div class="about__values reveal">
-        <span>Profesional</span>
-        <span>Audaz</span>
-        <span>Cálido</span>
-        <span>Preciso</span>
-        <span>Visionario</span>
+  <div class="container">
+    <div class="about__grid">
+      <div class="about__media reveal">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80" alt="Equipo de MIXO trabajando" class="about__img about__img--main">
+        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=600&q=80" alt="Detalle de trabajo creativo" class="about__img about__img--small">
+      </div>
+      <div class="about__content">
+        <p class="section-tag reveal">Quiénes somos</p>
+        <h2 class="section-title reveal">Un estudio con alma marplatense</h2>
+        <p class="reveal">Nacimos en Mar del Plata, entre el sonido del mar y las ganas de cambiar cómo se ve la comunicación local.</p>
+        <p class="reveal">Dos mentes creativas, mundos distintos: marketing visual y diseño de moda. Una sola visión.</p>
+        <p class="reveal">Hoy operamos hacia todo el territorio argentino, combinando calidez humana con estrategias que realmente funcionan. <strong>Cada proyecto es una pieza única de gran valor.</strong></p>
+        <div class="about__values reveal">
+          <span>Profesional</span>
+          <span>Audaz</span>
+          <span>Cálido</span>
+          <span>Preciso</span>
+          <span>Visionario</span>
+        </div>
       </div>
     </div>
   </div>
@@ -154,38 +175,42 @@
 
 <!-- PROCESO -->
 <section class="process" id="proceso">
-  <div class="marquee marquee--dark">
-    <div class="marquee__track">
-      <span>Nuestro Proceso</span><span>—</span>
-      <span>Nuestro Proceso</span><span>—</span>
-      <span>Nuestro Proceso</span><span>—</span>
-      <span>Nuestro Proceso</span><span>—</span>
-    </div>
-  </div>
   <div class="container">
     <div class="section-head reveal">
       <p class="section-tag section-tag--light">Cómo trabajamos</p>
       <h2 class="section-title section-title--light">De la idea al resultado</h2>
     </div>
 
-    <div class="process__list">
+    <div class="process__grid">
       <div class="process-step reveal">
-        <span class="process-step__num">01</span>
+        <div class="process-step__media">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=80" alt="Diagnóstico">
+          <span class="process-step__num">01</span>
+        </div>
         <h3>Diagnóstico</h3>
         <p>Escuchamos, investigamos y entendemos tu marca, tu mercado y tu punto de partida real.</p>
       </div>
       <div class="process-step reveal">
-        <span class="process-step__num">02</span>
+        <div class="process-step__media">
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=700&q=80" alt="Estrategia">
+          <span class="process-step__num">02</span>
+        </div>
         <h3>Estrategia</h3>
         <p>Diseñamos un plan a medida, con objetivos claros y acciones concretas para cada etapa.</p>
       </div>
       <div class="process-step reveal">
-        <span class="process-step__num">03</span>
+        <div class="process-step__media">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=700&q=80" alt="Ejecución">
+          <span class="process-step__num">03</span>
+        </div>
         <h3>Ejecución</h3>
         <p>Ponemos manos a la obra: contenido, campañas y herramientas funcionando en conjunto.</p>
       </div>
       <div class="process-step reveal">
-        <span class="process-step__num">04</span>
+        <div class="process-step__media">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&q=80" alt="Evolución">
+          <span class="process-step__num">04</span>
+        </div>
         <h3>Evolución</h3>
         <p>Medimos resultados, ajustamos el rumbo y hacemos crecer la estrategia junto a tu marca.</p>
       </div>
@@ -266,8 +291,10 @@
 
 <!-- CONTACTO -->
 <section class="contact" id="contacto">
+  <div class="contact__bg" style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2000&q=80')"></div>
+  <div class="contact__overlay"></div>
   <div class="container contact__inner">
-    <p class="section-tag reveal">Hablemos</p>
+    <p class="section-tag section-tag--light reveal">Hablemos</p>
     <h2 class="contact__title reveal">¿Listo para que tu marca se vea como se merece?</h2>
     <a href="https://wa.me/542233010313?text=Hola%20MIXO%2C%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n"
        class="btn btn--whatsapp btn--lg reveal" target="_blank" rel="noopener">
